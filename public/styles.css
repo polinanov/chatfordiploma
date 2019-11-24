@@ -1,0 +1,355 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css');
+
+*, p, h1, h3, a{
+	
+	font-family: 'Open Sans', 'sans-serif', 'FontAwesome';
+}
+
+*, p, h1, h3, a{ font-weight: 700; font-size: 13px;}
+
+
+
+body{
+    text-align: center;
+	background: rgb(52, 56, 61);
+}
+.onlineusers{
+	float: right;
+	margin-top: -35px;
+}
+
+
+#center{
+    max-width: 75% !important;
+    margin-left: 12.5%;
+    text-align: center; 
+    height: 70vh;
+    margin-top: 1vh;
+}
+
+
+
+#tabs {
+    overflow: hidden;
+    border: 1px solid rgb(52, 56, 61);
+    background-color:  rgb(28, 30, 33);
+    text-align: center;
+    min-height: 44px;
+    width: 100%;
+    margin-left:1px;
+}
+
+
+.tab{
+    background-color: inherit;
+	color: rgb(128,128,128);
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+
+.tab:hover {
+    background-color: rgb(128, 128, 128);
+	color: rgb(0,0,0);
+}
+
+#mainTextArea {
+display: inline-block;
+width:60%;
+height:401px;/*Длина:400px*/
+margin:0 -5px 0 0;
+resize:vertical;
+outline:none;/*Светящаяся рамка:убераем*/
+resize: none;
+border: 0;
+background:rgb(28, 30, 33);
+color:rgb(128,128,128);
+}
+
+.vertical{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -2px; 
+    width: 40%;
+}
+
+.col{
+    display: inline-block;
+    width: 50%;
+    height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin:0 -5px 0 0;
+    vertical-align: top;
+    background-color:  rgb(28, 30, 33);
+    color: black;
+    border-left: solid 1px rgb(52, 56, 61);
+    border-bottom: solid 1px rgb(52, 56, 61);
+    border-right: solid 1px rgb(52, 56, 61);
+}
+
+
+.room, .user, .usersInRoom{
+    background-color:  rgb(28, 30, 33);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    border-bottom: solid 1px rgb(52, 56, 61);
+}
+.room:hover, .user:hover, .usersInRoom:hover{
+    background-color:  rgb(128, 128, 128);
+}
+
+.room p, .user p, .usersInRoom p{
+	color:   rgb(128, 128, 128);
+}
+.room:hover p, .user:hover p, .usersInRoom:hover p{
+	color: rgb(0,0,0);
+}	
+h3{
+    text-align: center;
+    background-color:  rgb(128, 128, 128);
+    padding: 10px;
+    
+}
+input{
+    width: 79%;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #cecece;
+    background: #F6F6f6;
+
+}
+
+.activeTab{
+	/*background-color: rgb(128, 128, 128);*/
+    color: rgb(0, 126, 165);
+}
+
+button{
+    width: 20%;
+    border: 0;
+	outline: 0;
+    font-weight: 700;
+	background: rgb(28, 30, 33);
+	box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
+	color:  rgb(128, 128, 128);
+	
+}
+
+.input button{
+    width: 20%;
+	height:45px;
+    border: 0;
+	outline: 0;
+    font-weight: 700;
+	background: rgb(28, 30, 33);
+	box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
+	color:  rgb(128, 128, 128);
+	
+}
+
+
+/* === Sign in Form === */
+.input input[type="text"] {
+    display: inline-block;
+    width: 79%;
+    height: 45px;
+    border: 0;
+    outline: 0;
+    top: -2px;
+    font-weight: 700;
+}
+.input input[type="text"] {
+    background: rgb(28, 30, 33);
+    box-shadow: inset -100px -100px 0 rgb(28, 30, 33);
+    color: rgb(128,128,128);
+}
+
+.deleteUser{
+    width: 30px;
+    margin-top: -22px;
+    float: right;
+}
+
+.deleteTab{
+	width: 30px;
+    margin-top: -21px;
+	margin-left: 80px;
+    float: right;
+}
+.infoTab{
+	width: 30px;
+    margin-top: -21px;
+	margin-left: 80px;
+    float: right;
+}
+
+.loopTab{
+	
+}
+
+
+
+
+
+
+
+
+
+/*Кнопка темы*/
+.wrapper{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	position: fixed;
+	right:-220px;
+	bottom:-150px;
+	width: 400px;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.switch_box{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	max-width: 200px;
+	min-width: 200px;
+	height: 200px;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+/* Switch 3 Specific Style Start */
+
+.box_3{
+}
+
+.toggle_switch{
+  width: 100px;
+  height: 45px;
+  position: relative;
+}
+
+input[type="checkbox"].switch_3{
+
+    border: none !important;
+    background: none !important;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  outline: 0;
+  z-index: 1;
+}
+
+svg.checkbox .outer-ring{
+  stroke-dasharray: 375;
+  stroke-dashoffset: 375;
+  -webkit-animation: resetRing .35s ease-in-out forwards;
+          animation: resetRing .35s ease-in-out forwards;
+}
+
+input[type="checkbox"].switch_3:checked + svg.checkbox .outer-ring{
+  -webkit-animation: animateRing .35s ease-in-out forwards;
+          animation: animateRing .35s ease-in-out forwards;
+}
+
+input[type="checkbox"].switch_3:checked + svg.checkbox .is_checked{
+  opacity: 1;
+  -webkit-transform: translateX(0) rotate(0deg);
+          transform: translateX(0) rotate(0deg);
+}
+
+input[type="checkbox"].switch_3:checked + svg.checkbox .is_unchecked{
+  opacity: 0;
+  -webkit-transform: translateX(-200%) rotate(180deg);
+          transform: translateX(-200%) rotate(180deg);
+}
+
+
+svg.checkbox{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+svg.checkbox .is_checked{
+  opacity: 0;
+  fill: yellow;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: translateX(200%) rotate(45deg);
+          transform: translateX(200%) rotate(45deg);
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+svg.checkbox .is_unchecked{
+  opacity: 1;
+  fill: #fff;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: translateX(0) rotate(0deg);
+          transform: translateX(0) rotate(0deg);
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+@-webkit-keyframes animateRing{
+  to{
+    stroke-dashoffset: 0;
+    stroke: #b0aa28;
+  }
+}
+
+@keyframes animateRing{
+  to{
+    stroke-dashoffset: 0;
+    stroke: #b0aa28;
+  }
+}
+
+@-webkit-keyframes resetRing{
+  to{
+    stroke-dashoffset: 0;
+    stroke: #fff;
+  }
+}
+
+@keyframes resetRing{
+  to{
+    stroke-dashoffset: 0;
+    stroke: #fff;
+  }
+}
+
+/* Switch 3 Specific Style End */
+
